@@ -1,17 +1,13 @@
 /* margin mixin */
-@mixin margin-body {
-  margin-left: 10px;
-  margin-right: 10px;
+@mixin margin-first($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
 }
 
-@mixin margin-div {
-  margin-right: 15px;
-  margin-left: 15px;
+body {
+  @include margin-first(10px, 10px);
 }
 
-body{
-  @include margin-body;
-}
 div {
-  @include margin-div;
+  @include margin-first(15px, 15px);
 }
