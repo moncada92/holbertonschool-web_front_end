@@ -1,0 +1,20 @@
+/* columns and operators */
+
+
+@for $i from 1 through 4 {
+  col-#{$i} {
+
+    @if col-#{$i} == col-1{
+      width: 100%;
+    }
+    @else if col-#{$i} == col-2{
+      width: 50%;
+    }
+    @else if col-#{$i} == col-3{
+      width: 33.3333333333% ;
+    }
+    @else if col-#{$i} == col-4{
+      width: 25%;
+    }
+  }
+}
