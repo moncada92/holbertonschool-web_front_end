@@ -201,11 +201,11 @@
       ============================= */
   
   .nav {
-    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
+    display: flex;
   }
   
   .nav .nav-item {
@@ -215,9 +215,8 @@
     letter-spacing: var(--nav-item-letter-spacing);
   }
   
-  .nav-item + .nav-item {
+  .nav .nav-item + .nav-item {
     margin: var(--nav-item-margin);
-
   }
   
   .nav .nav-link {
