@@ -805,6 +805,7 @@ textarea:valid:not(:placeholder-shown) {
 }
 
 /*** SEARCH FORM ***/
+
 .form-search {
   display: block;
   padding: 0.5rem 0;
@@ -841,7 +842,7 @@ textarea:valid:not(:placeholder-shown) {
   position: relative;
   width: 15rem;
   z-index: 1;
-  border-bottom: 0.1rem solid var(--color-green);
+  border-bottom: 0.1rem solid var(--color-gray);
   padding: 0;
   cursor: text;
   margin: 0 1rem;
