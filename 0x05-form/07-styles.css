@@ -811,6 +811,7 @@ textarea:valid:not(:placeholder-shown) {
   padding: 0.5rem 0;
   position: relative;
 }
+
 .form-search .search-button {
   display: inline-block;
   background: transparent;
@@ -818,11 +819,13 @@ textarea:valid:not(:placeholder-shown) {
   margin: 0;
   padding: 0;
 }
+
 .search-button .search-icon {
   fill: var(--color-white);
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .form-search input[type="search"] {
   display: inline-block;
   color: var(--color-white);
@@ -838,11 +841,12 @@ textarea:valid:not(:placeholder-shown) {
   z-index: 3;
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
 }
+
 .form-search input[type="search"]:focus {
   position: relative;
   width: 15rem;
   z-index: 1;
-  border-bottom: 0.1rem solid var(--color-gray);
+  border-bottom: 0.1rem solid var(--color-grey);
   padding: 0;
   cursor: text;
   margin: 0 1rem;
