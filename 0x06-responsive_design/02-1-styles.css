@@ -217,7 +217,7 @@
     width: calc((100% / 2) - 2rem);
   }
 
-  @media all and (min-width: 767px) {
+  @media all and (max-width: 767px) {
     :root {
       --section-padding: 5rem 1.5rem;
       --section-body-padding: 2rem 0 0;
@@ -422,15 +422,15 @@
   /* Section Latest news
       ============================= */
   
-  .section-latest-news .row {
-    flex-direction: row-reverse;
-  }
-
-  @media all and (max-width: 767px) {
-    .section-latest-news .row {
-      flex-direction: column;
-    }
-  }
+      .section-latest-news .row {
+        flex-direction: row-reverse;
+      }
+      
+      @media all and (max-width: 767px) {
+        .section-latest-news .row {
+          flex-direction: column;
+        }
+      }
   
   /* Section SERVICES
       ============================= */
