@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 6</title>
+        <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"></script>
+
+    </head>
+   
+    <body>
+
+    </body>
+
+    <script type="application/javascript">
+      $(document).ready(function () {
+        createFamilyTree();
+        createForm();
+
+        $('button').on('click', ()=> {
+          let firstName = $('input').first().val();
+          let lastName = $('input:nth-of-type(2)')[0].value;
+          let position = $('select').val();
+          addNewMember(firstName, lastName, position);
+        })
+      });
+
+
+      function createFamilyTree() {
+
+        let table = $("<table></table>");
+
+        $("body").append(table);
+        
+        let thead = $("<thead></thead>")
+        let tr1 = $("<tr></tr>");
+        let th1 = $("<th></th>").text("FirstName");
+        let th2 = $("<th></th>").text("LastName");
+        tr1.append(th1, th2);
+        thead.append(tr1);
+        table.append(thead);
+        
+        let tbody = $("<tbody></tbody>")
+        table.append(tbody);
+
+      }
+
+      function addNewMember(firstName, lastName, position) {
+        let tr2 = $("<tr></tr>");
+        let td1 = $("<td></td>").text(firstName);
+        let td2 = $("<td></td>").text(lastName);
+        let td3 = $("<td></td>").text("(x)");
+        td3.css("background", "orange");
+        
+        td3.on("click", () => {
+          td3.closest("tr").remove()
+        })
+        
+        tr2.append(td1,td2, td3);
+
+        if (position === 'before') {
+          $("tbody").prepend(tr2);
+        } else {
+          $("tbody").append(tr2);
+        }
+      }
+
+      function createForm () {
+        let input1 = $("<input type='text'>");
+        let input2 = $("<input type='text'>");
+        let select = $("<select></select>");
+        let before = $("<option value='before'></option>").text("before");
+        let after = $("<option value='after'></option>").text("after");
+        let btn = $("<button type='submit'>Submit</button>");
+        
+        select.append(before, after);
+        $('table').before(input1,input2, select, btn);
+      }
+  </script>
+</html>
